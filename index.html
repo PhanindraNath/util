@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html" charset="utf-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>WhatsApp &#128220; &#8614; unSaved</title>
+    <style>
+      *{box-sizing:border-box;transition:all 0.2s ease-out}
+      body{margin:0;padding:1.5rem;min-height:100vh;color:#075E54;overflow:auto;display:flex;justify-content:center;align-items:center}
+      form{width:100%;max-width:400px}
+      .form-group{margin-bottom:1.5rem;display:flex;flex-direction:column}
+      label{margin-bottom:0.5rem}
+      .form-control{width:100%;padding:0.5rem 1rem;border:2px solid #128C7E;border-radius:3px;outline:none}
+      .form-control:focus{box-shadow:0 0 3px 1px #25D366}
+      .form-action-group{text-align:right}
+      .btn{border:1px solid;border-radius:3px;padding:0.5rem 1rem;font-weight:bold;min-width:100px}
+      .btn-primary{background-color:#128C7E;color:white;border-color:#075E54}
+      .btn-primary:hover,.btn-primary:focus,.btn-primary:active{background-color:#075E54}
+      .btn-reset-outline{background-color:#FFF;color:#ECE5DD}
+      .btn-reset-outline:hover,.btn-reset-outline:focus,.btn-reset-outline:active{background-color:#ECE5DD;color:#075E54}
+      *{box-sizing:border-box;transition:all 0.2s ease-out}body{margin:0;padding:1.5rem;min-height:100vh;color:#075E54;overflow:auto;display:flex;justify-content:center;align-items:center}form{width:100%;max-width:400px}.form-group{margin-bottom:1.5rem;display:flex;flex-direction:column}label{margin-bottom:0.5rem}.form-control{width:100%;padding:0.5rem 1rem;border:2px solid #128C7E;border-radius:3px;outline:none}.form-control:focus{box-shadow:0 0 3px 1px #25D366}.form-action-group{text-align:right}.btn{border:1px solid;border-radius:3px;padding:0.5rem 1rem;font-weight:bold;min-width:100px}.btn-primary{background-color:#128C7E;color:white;border-color:#075E54}.btn-primary:hover,.btn-primary:focus,.btn-primary:active{background-color:#075E54}.btn-reset-outline{background-color:#FFF;color:#ECE5DD}.btn-reset-outline:hover,.btn-reset-outline:focus,.btn-reset-outline:active{background-color:#ECE5DD;color:#075E54}
+    </style>
+  </head>
+  <body>
+    <form>
+      <div class="form-group">
+        <label for="wan">Enter WhatsApp Number</label>
+        <input class="form-control" type="number" name="wan" id="wan" tabindex="0">
+      </div>
+      <div class="form-action-group">
+        <button type="reset" class="btn btn-reset-outline" tabindex="2">Reset</button>
+        <button type="button" class="btn btn-primary" tabindex="1" onclick="wanProceed()">Proceed</button>
+      </div>
+    </form>
+    <script>
+      function wanProceed() {
+        let wan = document.getElementById('wan').value;
+        wan != "" && (window.location = "https://api.WhatsApp.com/send?phone=" + wan);
+      }
+    </script>
+  </body>
+</html>
